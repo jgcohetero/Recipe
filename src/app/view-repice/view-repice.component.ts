@@ -9,16 +9,23 @@ import { MealDBService } from '../services/meal-db.service';
 })
 export class ViewRepiceComponent implements OnInit {
 id:any;
+meals:any;
   constructor(private route:ActivatedRoute,private meal:MealDBService) {
     this.id = this.route.snapshot.paramMap.get('id');
     console.log(this.id)
-    this.meal.getIdMeal(this.id).
-    subscribe((res)=>{
-      console.log(res)
-    })
+    this.search(this.id);
    }
 
+   async search(id:any){
+    await this.meal.getIdMeal(id).
+    subscribe((res)=>{
+      this.meals=res.meals;
+      console.log(this.meals)
+    })
+   }
   ngOnInit() {
+  
   }
+
 
 }
