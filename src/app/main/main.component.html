@@ -10,7 +10,7 @@
                         <span class="date">4 days ago</span>
                         <h2>{{m.strMeal}}</h2>
                         <br>
-                        <button routerLink="../main/recetas">Ver receta</button>
+                        <button [routerLink]="['/receta', m.idMeal]">Ver receta</button>
                         <br>
                         <button (click)="subir(m.strMeal,m.strCategory,[m.strIngredient1 + ' '+ '' + m.strMeasure1, m.strIngredient2 + ' '+ '' + m.strMeasure2, m.strIngredient3 + ' '+ '' + m.strMeasure3
                         , m.strIngredient4 + ' '+ '' + m.strMeasure4, m.strIngredient5 + ' '+ '' + m.strMeasure5, m.strIngredient6 + ' '+ '' + m.strMeasure6, m.strIngredient7 + ' '+ '' + m.strMeasure7, m.strIngredient8 + ' '+ '' + m.strMeasure8, m.strIngredient9 + ' '+ '' + m.strMeasure9

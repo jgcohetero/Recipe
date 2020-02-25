@@ -13,6 +13,7 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/da
 import { CuentaComponent } from './cuenta/cuenta.component';
 import {HttpClientModule}from "@angular/common/http";
 import { MisRecetasComponent } from './mis-recetas/mis-recetas.component';
+import { ViewRepiceComponent } from './view-repice/view-repice.component';
 var firebaseConfig = {
   apiKey: "AIzaSyDrW-D80lEvmTHriQJLXwQaSWKnIpw1yxQ",
   authDomain: "emperador-849ad.firebaseapp.com",
@@ -29,7 +30,8 @@ var firebaseConfig = {
     CuentaComponent,
     MisRecetasComponent,
     MainComponent,
-    NavbarComponent
+    NavbarComponent,
+    ViewRepiceComponent
   ],
   imports: [
     BrowserModule,
