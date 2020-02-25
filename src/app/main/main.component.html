@@ -1,0 +1,21 @@
+<div>
+    <app-navbar></app-navbar>
+    <h1 class="titulo"> Las favoritas de nuestra comunidad</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm" *ngFor="let m of meals">
+                <div class="card">
+                    <img src="{{m.strMealThumb}}" alt="" class="card-image">
+                    <div class="card-text">
+                        <span class="date">4 days ago</span>
+                        <h2>{{m.strMeal}}</h2>
+                        <br>
+                        <button routerLink="../main/recetas">Ver receta</button>
+                        <br>
+                        <button (click)="subir(m.strMeal,m.strCategory,m.strIngredient1,m.strMeasure1,m.idMeal,m.strInstructions,m.strMealThumb)">Agregar receta</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

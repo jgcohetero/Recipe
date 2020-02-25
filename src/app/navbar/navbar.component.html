@@ -1,0 +1,49 @@
+<link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Playfair+Display&display=swap" rel="stylesheet">
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="javascript:void(0)">MealDB</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navb">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Mis recetas</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" #formLogin="ngForm" (submit)="busqueda()">
+            <input class="form-control mr-sm-2" type="text" placeholder="buscar" name="buscar" [(ngModel)]="buscar">
+            <button class="btn my-2 my-sm-0 buscar" type="submit">Buscar</button>
+            <ul class="navbar-nav perfil">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        <img src="{{photo}}" alt="" class="img">
+                    </a>
+                    <div class="dropdown-menu">
+                        <p class="dropdown-item">Usuario: <br> {{displayName}}</p>
+                        <button class="dropdown-item alink" (click)="authService.logOutFirebase()">Cerrar
+                            sesión</button>
+                    </div>
+                </li>
+            </ul>
+        </form>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-sm" *ngFor="let m of data">
+            <div class="card">
+                <img src="{{m.strMealThumb}}" alt="" class="card-image">
+                <div class="card-text">
+                    <span class="date">4 days ago</span>
+                    <h2>{{m.strMeal}}</h2>
+                    <button>Ver receta</button>
+                    <br>
+                    <button>Agregar receta</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

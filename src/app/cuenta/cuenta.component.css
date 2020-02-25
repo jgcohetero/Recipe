@@ -1,0 +1,40 @@
+.body{
+    background-image: url(/assets/img/fondo3.jpg);
+    height:51.5em; background-size:cover; width:auto;
+    /* background-image:url('copied image address'); */
+    background-position:100% 100%;
+    /* background-attachment: fixed; */
+}
+.formulario{
+    background: rgba(0, -0, -0, .5);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+.form-control{
+    background: rgba(0, -0, -0, .3);
+    border-style: none;
+    transition: 0.5s ease-in;
+    outline: none;
+    box-shadow: none;
+    color: white;
+}
+.form-control:focus{
+    background: white;
+    color: black;
+}
+.form-control::placeholder{
+color: white;
+}
+.crear{
+    background: black;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700!important;
+    box-shadow: 0 0 30px rgba(0, -0, -0, 0.568);
+    transition: 0.5s ease-in;
+    color: white;
+}
+.crear:hover{
+    color:tan;
+}
