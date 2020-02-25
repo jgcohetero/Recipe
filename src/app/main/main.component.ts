@@ -40,8 +40,8 @@ export class MainComponent implements OnInit {
   metodo(){
     console.log(localStorage.getItem('user'))
   }
-    subir(titulo:any,categoria:any,ingredientes:any,porciones:any,id:any,pasos:any,img:any){
-      this.houseIoTService.insertNew(titulo,categoria,ingredientes,porciones,id,pasos,img);
+    subir(titulo:any,categoria:any,ingredientes:any,id:any,pasos:any,img:any){
+      this.houseIoTService.insertNew(titulo,categoria,ingredientes,id,pasos,img);
     }
 
 }
