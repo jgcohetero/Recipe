@@ -8,9 +8,9 @@
                     <span class="date">4 days ago</span>
                     <h2>{{m.titulo}}</h2>
                     <br>
-                    <button routerLink="/main/recetas">Ver receta</button>
+                    <button [routerLink]="['/receta', m.id]">Ver receta</button>
                     <br>
-                    <button>Editar</button>
+                    <button [routerLink]="['/editar', m.id]">Editar</button>
                 </div>
             </div>
         </div>

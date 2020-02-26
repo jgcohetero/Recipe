@@ -7,6 +7,7 @@ import { CuentaComponent } from './cuenta/cuenta.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MisRecetasComponent } from './mis-recetas/mis-recetas.component';
 import { ViewRepiceComponent } from './view-repice/view-repice.component';
+import { EditComponent } from './edit/edit.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,12 @@ const routes: Routes = [
   {
     path: 'recetas', component: MisRecetasComponent
   },
-  { path: 'receta/:id', component: ViewRepiceComponent }
+  {
+    path: 'receta/:id', component: ViewRepiceComponent
+  },
+  {
+    path: 'editar/:id', component: EditComponent
+  }
 ];
 
 @NgModule({

@@ -15,6 +15,7 @@ import {HttpClientModule}from "@angular/common/http";
 import { MisRecetasComponent } from './mis-recetas/mis-recetas.component';
 import { ViewRepiceComponent } from './view-repice/view-repice.component';
 import { EditComponent } from './edit/edit.component';
+import { ViewRecipeFirebaseComponent } from './view-recipe-firebase/view-recipe-firebase.component';
 var firebaseConfig = {
   apiKey: "AIzaSyDrW-D80lEvmTHriQJLXwQaSWKnIpw1yxQ",
   authDomain: "emperador-849ad.firebaseapp.com",
@@ -33,7 +34,8 @@ var firebaseConfig = {
     MainComponent,
     NavbarComponent,
     ViewRepiceComponent,
-    EditComponent
+    EditComponent,
+    ViewRecipeFirebaseComponent
   ],
   imports: [
     BrowserModule,

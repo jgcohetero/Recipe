@@ -27,4 +27,5 @@ export class FirebaseServicesService {
     return this.houseIoT.list(`/mealDB/${this.uid}/recetas/${id}`).valueChanges();
   }
   
+  
 }
