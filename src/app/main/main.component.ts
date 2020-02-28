@@ -14,9 +14,9 @@ export class MainComponent implements OnInit {
   constructor(private meal: MealDBService, private houseIoTService: FirebaseServicesService) {
     this.data = [];
     this.meals = [];
-    this.meal.getInicio().subscribe((res)=>{
+    this.meal.getInicio().subscribe((res) => {
       console.log(res.meals);
-      this.meals=res.meals
+      this.meals = res.meals
     })
   }
 
@@ -30,18 +30,18 @@ export class MainComponent implements OnInit {
         this.data = res.meals;
       })
   }
-  getInicioMain(){
-    this.meal.getInicio().subscribe((res)=>{
+  getInicioMain() {
+    this.meal.getInicio().subscribe((res) => {
       console.log(res.meals);
       var p = res.meals.strMeal;
-      this.meals=res.meals
+      this.meals = res.meals
     })
   }
-  metodo(){
+  metodo() {
     console.log(localStorage.getItem('user'))
   }
-    subir(titulo:any,categoria:any,ingredientes:any,id:any,pasos:any,img:any){
-      this.houseIoTService.insertNew(titulo,categoria,ingredientes,id,pasos,img);
-    }
+  subir(titulo: any, categoria: any, ingredientes: any, id: any, pasos: any, img: any) {
+    this.houseIoTService.insertNew(titulo, categoria, ingredientes, id, pasos, img);
+  }
 
 }

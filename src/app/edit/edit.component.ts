@@ -31,10 +31,10 @@ export class EditComponent implements OnInit {
    }
   ngOnInit() {
   }
-  editar(titulo,img,categoria,ingredientes,pasos,id){
+  editar(titulo,img,categoria,ingredientes,pasos,id,dificultad){
     console.log(titulo,img,categoria,ingredientes,pasos)
     console.log(id)
-    this.firebase.update(titulo, categoria, ingredientes, id, pasos, img).catch((err)=>{
+    this.firebase.update(titulo, categoria, ingredientes, id, pasos, img,dificultad).catch((err)=>{
       console.log(err);
     })
 
