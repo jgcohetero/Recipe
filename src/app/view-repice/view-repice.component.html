@@ -1,3 +1,75 @@
-<div *ngFor="let meal of meals">
-<p>{{meal.strMeal}}</p>
+<!-- <div class="container" *ngFor="let meal of meals">
+    <h1>{{meal.strMeal}}</h1>
+    <div class="card">
+        <img class="card-img-top img" src="{{meal.strMealThumb}}" alt="Card image cap">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-4 ingredients">
+                    <h4>Category</h4>
+                    <h6>{{meal.strCategory}}</h6>
+                    <h4>Ingredients</h4>
+                        <h6 *ngIf="meal.strIngredient1!=null">{{meal.strIngredient1}} {{meal.strMeasure1}}</h6>
+                        <h6 *ngIf="meal.strIngredient2!=null">{{meal.strIngredient2}} {{meal.strMeasure2}}</h6>
+                        <h6 *ngIf="meal.strIngredient3!=null">{{meal.strIngredient3}} {{meal.strMeasure3}}</h6>
+                        <h6 *ngIf="meal.strIngredient4!=null">{{meal.strIngredient4}} {{meal.strMeasure4}}</h6>
+                        <h6 *ngIf="meal.strIngredient5!=null">{{meal.strIngredient5}} {{meal.strMeasure5}}</h6>
+                        <h6 *ngIf="meal.strIngredient6!=null">{{meal.strIngredient6}} {{meal.strMeasure6}}</h6>
+                        <h6 *ngIf="meal.strIngredient7!=null">{{meal.strIngredient7}} {{meal.strMeasure7}}</h6>
+                        <h6 *ngIf="meal.strIngredient8!=null">{{meal.strIngredient8}} {{meal.strMeasure8}}</h6>
+                        <h6 *ngIf="meal.strIngredient9!=null">{{meal.strIngredient9}} {{meal.strMeasure9}}</h6>
+                        <h6 *ngIf="meal.strIngredient10!=null">{{meal.strIngredient10}} {{meal.strMeasure10}}</h6>
+                        <h6 *ngIf="meal.strIngredient11!=null">{{meal.strIngredient11}} {{meal.strMeasure11}}</h6>
+                        <h6 *ngIf="meal.strIngredient12!=null">{{meal.strIngredient12}} {{meal.strMeasure12}}</h6>
+                        <h6 *ngIf="meal.strIngredient13!=null">{{meal.strIngredient13}} {{meal.strMeasure13}}</h6>
+                        <h6 *ngIf="meal.strIngredient14!=null">{{meal.strIngredient14}} {{meal.strMeasure14}}</h6>
+                        <h6 *ngIf="meal.strIngredient15!=null">{{meal.strIngredient15}} {{meal.strMeasure15}}</h6>
+                        <h6 *ngIf="meal.strIngredient16!=null">{{meal.strIngredient16}} {{meal.strMeasure16}}</h6>
+                        <h6 *ngIf="meal.strIngredient17!=null">{{meal.strIngredient17}} {{meal.strMeasure17}}</h6>
+                        <h6 *ngIf="meal.strIngredient18!=null">{{meal.strIngredient18}} {{meal.strMeasure18}}</h6>
+                        <h6 *ngIf="meal.strIngredient19!=null">{{meal.strIngredient19}} {{meal.strMeasure19}}</h6>
+                        <h6 *ngIf="meal.strIngredient20!=''">{{meal.strIngredient20}} {{meal.strMeasure20}}</h6>
+                </div>
+                <div class="col-6 instructions">
+                    <h4>Instructions</h4>
+                    <p>{{meal.strInstructions}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<app-navbar></app-navbar>
+<div class="container" *ngFor="let meal of meals">
+    <h1>{{meal.strMeal}}</h1>
+    <div class="row">
+        <div class="col-6">
+            <img src="{{meal.strMealThumb}}" alt="" class="img">
+            <h4>Category</h4>
+            <h6>{{meal.strCategory}}</h6>
+        </div>
+        <div class="col-6">
+            <h4 class="dos">Ingredients</h4>
+            <h6 *ngIf="meal.strIngredient1!=null">{{meal.strIngredient1}} {{meal.strMeasure1}}</h6>
+            <h6 *ngIf="meal.strIngredient2!=null">{{meal.strIngredient2}} {{meal.strMeasure2}}</h6>
+            <h6 *ngIf="meal.strIngredient3!=null">{{meal.strIngredient3}} {{meal.strMeasure3}}</h6>
+            <h6 *ngIf="meal.strIngredient4!=null">{{meal.strIngredient4}} {{meal.strMeasure4}}</h6>
+            <h6 *ngIf="meal.strIngredient5!=null">{{meal.strIngredient5}} {{meal.strMeasure5}}</h6>
+            <h6 *ngIf="meal.strIngredient6!=null">{{meal.strIngredient6}} {{meal.strMeasure6}}</h6>
+            <h6 *ngIf="meal.strIngredient7!=null">{{meal.strIngredient7}} {{meal.strMeasure7}}</h6>
+            <h6 *ngIf="meal.strIngredient8!=null">{{meal.strIngredient8}} {{meal.strMeasure8}}</h6>
+            <h6 *ngIf="meal.strIngredient9!=null">{{meal.strIngredient9}} {{meal.strMeasure9}}</h6>
+            <h6 *ngIf="meal.strIngredient10!=null">{{meal.strIngredient10}} {{meal.strMeasure10}}</h6>
+            <h6 *ngIf="meal.strIngredient11!=null">{{meal.strIngredient11}} {{meal.strMeasure11}}</h6>
+            <h6 *ngIf="meal.strIngredient12!=null">{{meal.strIngredient12}} {{meal.strMeasure12}}</h6>
+            <h6 *ngIf="meal.strIngredient13!=null">{{meal.strIngredient13}} {{meal.strMeasure13}}</h6>
+            <h6 *ngIf="meal.strIngredient14!=null">{{meal.strIngredient14}} {{meal.strMeasure14}}</h6>
+            <h6 *ngIf="meal.strIngredient15!=null">{{meal.strIngredient15}} {{meal.strMeasure15}}</h6>
+            <h6 *ngIf="meal.strIngredient16!=null">{{meal.strIngredient16}} {{meal.strMeasure16}}</h6>
+            <h6 *ngIf="meal.strIngredient17!=null">{{meal.strIngredient17}} {{meal.strMeasure17}}</h6>
+            <h6 *ngIf="meal.strIngredient18!=null">{{meal.strIngredient18}} {{meal.strMeasure18}}</h6>
+            <h6 *ngIf="meal.strIngredient19!=null">{{meal.strIngredient19}} {{meal.strMeasure19}}</h6>
+            <h6 *ngIf="meal.strIngredient20!=''">{{meal.strIngredient20}} {{meal.strMeasure20}}</h6>
+            <h4 class="dos">Instructions</h4>
+            <p class="justify">{{meal.strInstructions}}</p>
+        </div>
+    </div>
 </div>

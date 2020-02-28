@@ -14,7 +14,7 @@
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0" #formLogin="ngForm" (submit)="busqueda()">
-            <input class="form-control mr-sm-2" type="text" placeholder="buscar" name="buscar" [(ngModel)]="buscar">
+            <input class="form-control mr-sm-2" type="text" placeholder="Buscar" name="buscar" [(ngModel)]="buscar">
             <button class="btn my-2 my-sm-0 buscar" type="submit">Buscar</button>
             <ul class="navbar-nav perfil">
                 <li class="nav-item dropdown">
@@ -39,7 +39,7 @@
                 <div class="card-text">
                     <span class="date">4 days ago</span>
                     <h2>{{m.strMeal}}</h2>
-                    <button>Ver receta</button>
+                    <button [routerLink]="['/receta', m.idMeal]">Ver receta</button>
                     <br>
                     <button>Agregar receta</button>
                 </div>

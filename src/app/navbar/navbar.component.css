@@ -31,6 +31,7 @@ font-family: 'Montserrat' ;
 .card{
     width: 300px;
     height: 500px ;
+    margin-top: 70px;
     margin-bottom: 50px;
     font-family: roboto;
     border-radius: 18px;
