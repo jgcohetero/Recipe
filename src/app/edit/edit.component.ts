@@ -37,7 +37,7 @@ export class EditComponent implements OnInit {
     this.firebase.update(titulo, categoria, ingredientes, id, pasos, img,dificultad).catch((err)=>{
       console.log(err);
     });
-    this.router.navigate(['/receta',id]);
+    this.router.navigate(['/misrecetas',id]);
 
   }
 

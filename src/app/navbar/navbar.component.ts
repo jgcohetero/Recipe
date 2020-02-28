@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { MealDBService } from '../services/meal-db.service';
+import { FirebaseServicesService } from '../services/firebase-services.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -14,7 +16,8 @@ export class NavbarComponent implements OnInit {
   photo:any;
   buscar:any;
   data:any;
-  constructor(private authService: AuthService, private libros:MealDBService) { 
+  constructor(private authService: AuthService, private libros:MealDBService, private houseIoTService: FirebaseServicesService,private router: Router) { 
+    
     if(this.authService.isLoggedIn=true){
       this.user = localStorage.getItem('user');
       if(JSON.parse(this.user)!=null){
@@ -48,5 +51,8 @@ export class NavbarComponent implements OnInit {
       }
     })
   }
-
+  subir(titulo: any, categoria: any, ingredientes: any, id: any, pasos: any, img: any) {
+    this.houseIoTService.insertNew(titulo, categoria, ingredientes, id, pasos, img);
+    this.router.navigate(['/recetas']);
+  }
 }
