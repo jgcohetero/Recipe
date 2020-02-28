@@ -41,6 +41,11 @@ export class NavbarComponent implements OnInit {
     subscribe((res)=>{
       console.log(res.meals);
       this.data=res.meals;
+      if(this.data != null){
+        console.log("success")
+      }else{
+        alert("No existe la recete "+this.buscar)
+      }
     })
   }
 

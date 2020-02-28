@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MealDBService } from '../services/meal-db.service';
 import { FirebaseServicesService } from '../services/firebase-services.service';
 
@@ -15,7 +15,7 @@ export class EditComponent implements OnInit {
   recipe:any;
   ingredientes:any;
   pasos:any;
-  constructor(private route: ActivatedRoute, private firebase:FirebaseServicesService) {
+  constructor(private route: ActivatedRoute,private router:Router, private firebase:FirebaseServicesService) {
     this.id = this.route.snapshot.paramMap.get('id');
     console.log(this.id);
     this.search(this.id);
@@ -36,7 +36,8 @@ export class EditComponent implements OnInit {
     console.log(id)
     this.firebase.update(titulo, categoria, ingredientes, id, pasos, img,dificultad).catch((err)=>{
       console.log(err);
-    })
+    });
+    this.router.navigate(['/receta',id]);
 
   }
 
