@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div class="pad"></div>
 <div class="card mb-3">
   <div class="row">
@@ -48,7 +49,7 @@
         </div>
       </div>
       <input *ngIf="recipe" type="text" id="id" name="id" [(ngModel)]="recipe.id" #id="ngModel" class="form-control mt-2" value="{{recipe.id}}" hidden>
-      <button class="btn btn-success mt-2" type="submit" (click)="editar(recipe.titulo,recipe.img,recipe.categoria,recipe.ingredientes,pasos,recipe.id)">Edit recipe</button>
+      <button class="btn btn-success mt-2" type="submit" (click)="editar(recipe.titulo,recipe.img,recipe.categoria,recipe.ingredientes,pasos,recipe.id,recipe.dificultad)">Edit recipe</button>
     </div>
     </form>
   </div>

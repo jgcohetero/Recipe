@@ -1,0 +1,20 @@
+.instructions p{
+    text-align: justify;
+    }
+    .container{
+        font-family: roboto;
+    }
+    .container h1{
+        text-align: center;
+    }
+    .img{
+        width: 80%;
+        height: 400px;
+        
+    }
+    .dos{
+        text-align: center;
+    }
+    .justify{
+        text-align: justify;
+    }

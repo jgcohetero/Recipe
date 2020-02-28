@@ -1,1 +1,23 @@
-<p>view-recipe-firebase works!</p>
+<app-navbar></app-navbar>
+<div class="container">
+    <div *ngIf="recipe">
+        <h1>{{recipe.titulo}}</h1>
+        <div class="row">
+            <div class="col-6">
+                <img src="{{recipe.img}}" alt="" class="img">
+                <h4>Category</h4>
+                <h6>{{recipe.categoria}}</h6>
+                <h4>Dificultad</h4>
+                <h6>{{recipe.dificultad}}</h6>
+            </div>
+            <div class="col-6">
+                <div>
+                    <h4 class="dos">Ingredients</h4>
+                    <h6 *ngFor="let ingrediente of ingredientes; index as i" >{{recipe.ingredientes[i]}}</h6>
+                </div>
+                <h4 class="dos">Instructions</h4>
+                <p class="justify">{{recipe.pasos}}</p>
+            </div>
+        </div>
+    </div>
+</div>

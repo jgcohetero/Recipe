@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MisRecetasComponent } from './mis-recetas/mis-recetas.component';
 import { ViewRepiceComponent } from './view-repice/view-repice.component';
 import { EditComponent } from './edit/edit.component';
+import { ViewRecipeFirebaseComponent } from './view-recipe-firebase/view-recipe-firebase.component';
 
 
 const routes: Routes = [
@@ -31,6 +32,10 @@ const routes: Routes = [
   },
   {
     path: 'editar/:id', component: EditComponent
+  },
+  {
+    path: 'misrecetas/:id', component: ViewRecipeFirebaseComponent
+
   }
 ];
 
